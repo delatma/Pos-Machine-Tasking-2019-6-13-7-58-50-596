@@ -96,14 +96,10 @@ ${total}`;
 }
 
 const printReceipt=barcodes=>{
-    if(isValidBarcodes(barcodes)){
         let itemList = getBarcodesInformation(barcodes);
         let items = settleItemsFromBarcodes(itemList);
         let receipt = renderReceipt(items);
         return receipt;
-    }else{
-        return `Error: can't find these barcodes id from database`;
-    }
 }
 
 exports.getAllItemsList = getAllItemsList;
